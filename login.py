@@ -27,7 +27,7 @@ def post_request(username: str, passwd: str):
         'save_me': '1'
     }
     # 没有卵用的cookie
-    # s.cookies.set('login','bQ0pOyR6IXU7PJaQQqRAcBPxGAvxAcroYpuUwjCZkX4EBQxJp11zUkESK8lFhsWyj8ZRcZ2ivaRVS4sXJ%252BHftO0yht0WqbpSDtet46wEma8Zi5kRMrlR5njPg1zz27f1Tsa27pWsw00V1Pau1wNLVlbHIUcDNs%252BXT0Swdfe9DjqfshuExvbdp7Ec5PYxpZTKUlSC')
+    # s.cookies.set('login','')
     s.headers.update(headers)
     status = s.post(url=url, data=post_data).status_code
     if status == 200:
@@ -54,5 +54,4 @@ if __name__ == '__main__':
             time.sleep(3)
     else:
         raise e
-
     post_request('[student ID]', '[campus network password]')
